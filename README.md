@@ -1,4 +1,4 @@
-Energy-Aware Entity Resolution on Kubernetes
+# Energy-Aware Entity Resolution on Kubernetes
 
 <p align="center">
   <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-orchestration-326CE5?logo=kubernetes&logoColor=white">
@@ -18,11 +18,11 @@ Energy-Aware Entity Resolution on Kubernetes
 
 This repository contains the Kubernetes deployment of an Energy-Aware Entity Resolution pipeline.
 
-The original Python pipeline is split into multiple containerized tasks and orchestrated with Argo Workflows. The goal is to execute the entity resolution workflow on a Kubernetes cluster while keeping track of execution time, resource placement, and energy consumption through CodeCarbon reports.
+The original Python pipeline is split into multiple containerized tasks and orchestrated with Argo Workflows. The goal is to execute the entity resolution workflow on a Kubernetes cluster while keeping track of execution time, resource placement, and energy consumption through Ecofloc.
 
-![](architecture.png)Architecture overview
+![Architecture overview](architecture.png)
 
-Table of contents
+## Table of contents
 
 - Overview
 - Main features
@@ -63,10 +63,10 @@ Argo Workflows is used for batch execution, while a set of incremental Kubernete
 - Persistent storage through PVC manifests for datasets, models, buffers, Kafka data, and reports.
 - ConfigMap generation for Python distribution scripts and runtime configuration.
 - Node scheduling compiler based on a readable YAML file.
-- CodeCarbon integration for per-workflow energy and emissions reporting.
+- Ecofloc and process monitoring for energy and emissions reporting.
 - Helper CLI wrapper through k8s/scripts/erctl.sh.
 
-Repository structure
+# Repository structure
 
 ```text
 .
